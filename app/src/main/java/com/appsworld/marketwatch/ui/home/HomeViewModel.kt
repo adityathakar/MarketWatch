@@ -3,11 +3,8 @@ package com.appsworld.marketwatch.ui.home
 import androidx.lifecycle.ViewModel
 import com.appsworld.marketwatch.navigation.Navigator
 import com.appsworld.marketwatch.navigation.StockDetail
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
 
-@HiltViewModel
-class HomeViewModel @Inject constructor(
+class HomeViewModel(
     private val navigator: Navigator
 ) : ViewModel() {
 

@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.animation.slideInHorizontally
 import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
-import androidx.navigation3.runtime.entry
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
 import com.appsworld.marketwatch.navigation.Home
@@ -16,14 +15,11 @@ import com.appsworld.marketwatch.navigation.StockDetail
 import com.appsworld.marketwatch.ui.home.HomeScreen
 import com.appsworld.marketwatch.ui.stock.StockDetailScreen
 import com.appsworld.marketwatch.ui.theme.MarketWatchTheme
-import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
+import org.koin.android.ext.android.inject
 
-@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    @Inject
-    lateinit var navigator: Navigator
+    private val navigator: Navigator by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

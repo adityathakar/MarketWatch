@@ -19,12 +19,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import org.koin.androidx.compose.koinViewModel
 import com.appsworld.marketwatch.navigation.StockDetail
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun StockDetailScreen(route: StockDetail, viewModel: StockDetailViewModel = viewModel()) {
+fun StockDetailScreen(route: StockDetail, viewModel: StockDetailViewModel = koinViewModel()) {
     Scaffold(
         topBar = {
             TopAppBar(

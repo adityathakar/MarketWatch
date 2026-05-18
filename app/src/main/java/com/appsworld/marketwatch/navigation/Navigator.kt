@@ -2,11 +2,8 @@ package com.appsworld.marketwatch.navigation
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
-import dagger.hilt.android.scopes.ActivityRetainedScoped
-import javax.inject.Inject
 
-@ActivityRetainedScoped
-class Navigator @Inject constructor() {
+class Navigator {
     val backStack: SnapshotStateList<Any> = mutableStateListOf(Home)
 
     fun navigateTo(destination: Any) {

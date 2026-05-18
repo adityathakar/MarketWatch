@@ -1,5 +1,10 @@
 package com.appsworld.marketwatch.navigation
 
-data object Home
+import androidx.navigation3.runtime.NavKey
+import kotlinx.serialization.Serializable
 
-data class StockDetail(val symbol: String)
+@Serializable
+data object Home : NavKey
+
+@Serializable
+data class StockDetail(val symbol: String) : NavKey
