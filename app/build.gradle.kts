@@ -71,6 +71,11 @@ dependencies {
     implementation(libs.navigation3.ui)
     implementation(libs.kotlinx.serialization.core)
 
+    // Feature modules
+    implementation(project(":core:navigation"))
+    implementation(project(":auth:api"))
+    implementation(project(":auth:impl"))
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

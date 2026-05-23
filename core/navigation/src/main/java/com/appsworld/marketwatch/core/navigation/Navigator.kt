@@ -1,11 +1,11 @@
-package com.appsworld.marketwatch.navigation
+package com.appsworld.marketwatch.core.navigation
 
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import java.util.IdentityHashMap
 
 class Navigator {
-    val backStack: SnapshotStateList<Any> = mutableStateListOf(Home)
+    val backStack: SnapshotStateList<Any> = mutableStateListOf()
 
     fun navigateTo(destination: Any) {
         backStack.add(destination)

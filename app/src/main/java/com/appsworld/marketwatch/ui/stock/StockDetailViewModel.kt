@@ -1,7 +1,7 @@
 package com.appsworld.marketwatch.ui.stock
 
 import androidx.lifecycle.ViewModel
-import com.appsworld.marketwatch.navigation.Navigator
+import com.appsworld.marketwatch.core.navigation.Navigator
 
 class StockDetailViewModel(
     private val navigator: Navigator

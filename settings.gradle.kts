@@ -24,3 +24,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "Market Watch"
 include(":app")
+include(":core:navigation")
+include(":auth:api")
+include(":auth:impl")

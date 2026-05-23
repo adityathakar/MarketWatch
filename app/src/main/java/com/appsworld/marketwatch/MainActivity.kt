@@ -9,8 +9,10 @@ import androidx.compose.animation.slideOutHorizontally
 import androidx.compose.animation.togetherWith
 import androidx.navigation3.runtime.entryProvider
 import androidx.navigation3.ui.NavDisplay
+import com.appsworld.marketwatch.auth.api.LoginRoute
+import com.appsworld.marketwatch.auth.ui.LoginScreen
+import com.appsworld.marketwatch.core.navigation.Navigator
 import com.appsworld.marketwatch.navigation.Home
-import com.appsworld.marketwatch.navigation.Navigator
 import com.appsworld.marketwatch.navigation.StockDetail
 import com.appsworld.marketwatch.ui.home.HomeScreen
 import com.appsworld.marketwatch.ui.stock.StockDetailScreen
@@ -23,6 +25,9 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (navigator.backStack.isEmpty()) {
+            navigator.navigateTo(Home)
+        }
         enableEdgeToEdge()
         setContent {
             MarketWatchTheme {
@@ -47,6 +52,7 @@ class MainActivity : ComponentActivity() {
                     entryProvider = entryProvider {
                         entry<Home> { HomeScreen() }
                         entry<StockDetail> { key -> StockDetailScreen(route = key) }
+                        entry<LoginRoute> { LoginScreen() }
                     }
                 )
             }

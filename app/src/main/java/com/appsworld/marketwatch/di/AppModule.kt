@@ -1,6 +1,6 @@
 package com.appsworld.marketwatch.di
 
-import com.appsworld.marketwatch.navigation.Navigator
+import com.appsworld.marketwatch.core.navigation.Navigator
 import com.appsworld.marketwatch.ui.home.HomeViewModel
 import com.appsworld.marketwatch.ui.stock.StockDetailViewModel
 import org.koin.dsl.module
