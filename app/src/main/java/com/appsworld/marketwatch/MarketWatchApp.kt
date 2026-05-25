@@ -2,6 +2,7 @@ package com.appsworld.marketwatch
 
 import android.app.Application
 import com.appsworld.marketwatch.auth.di.authModule
+import com.appsworld.marketwatch.core.infra.infraModule
 import com.appsworld.marketwatch.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -13,7 +14,7 @@ class MarketWatchApp : Application() {
         startKoin {
             androidContext(this@MarketWatchApp)
             androidLogger()
-            modules(appModule, authModule)
+            modules(infraModule, appModule, authModule)
         }
     }
 }

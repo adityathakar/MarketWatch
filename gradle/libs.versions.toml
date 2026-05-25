@@ -14,6 +14,8 @@ composeBom = "2025.05.00"
 activityCompose = "1.10.1"
 lifecycleViewmodelCompose = "2.9.0"
 navigation3 = "1.1.1"
+ktor = "3.1.3"
+securityCrypto = "1.1.0-alpha06"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -40,6 +42,12 @@ navigation3-runtime = { group = "androidx.navigation3", name = "navigation3-runt
 navigation3-ui = { group = "androidx.navigation3", name = "navigation3-ui", version.ref = "navigation3" }
 # Kotlin Serialization (required for @Serializable NavKey routes)
 kotlinx-serialization-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-core", version.ref = "kotlinxSerializationCore" }
+# Ktor
+ktor-client-okhttp              = { group = "io.ktor", name = "ktor-client-okhttp",              version.ref = "ktor" }
+ktor-client-content-negotiation = { group = "io.ktor", name = "ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+# Security
+androidx-security-crypto        = { group = "androidx.security", name = "security-crypto",        version.ref = "securityCrypto" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
