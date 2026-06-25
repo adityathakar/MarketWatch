@@ -26,5 +26,6 @@ rootProject.name = "Market Watch"
 include(":app")
 include(":core:navigation")
 include(":core:infra")
+include(":core:state")
 include(":auth:api")
 include(":auth:impl")
