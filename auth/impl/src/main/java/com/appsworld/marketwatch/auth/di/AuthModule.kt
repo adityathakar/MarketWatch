@@ -4,6 +4,7 @@ import com.appsworld.marketwatch.auth.api.AccessTokenProvider
 import com.appsworld.marketwatch.auth.api.AuthStatusProvider
 import com.appsworld.marketwatch.auth.data.AuthRepositoryImpl
 import com.appsworld.marketwatch.auth.data.KiteAuthService
+import com.appsworld.marketwatch.auth.data.SecureTokenStore
 import com.appsworld.marketwatch.auth.domain.TokenExchanger
 import com.appsworld.marketwatch.auth.ui.LoginViewModel
 import org.koin.dsl.module
@@ -14,6 +15,8 @@ import org.koin.plugin.module.dsl.viewModel
 val authModule = module {
 
     single<KiteAuthService>()
+
+    single<SecureTokenStore>()
 
     single<AuthRepositoryImpl>()
         .bind(AuthStatusProvider::class)

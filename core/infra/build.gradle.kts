@@ -30,5 +30,4 @@ dependencies {
     api(libs.ktor.client.okhttp)
     api(libs.ktor.client.content.negotiation)
     api(libs.ktor.serialization.kotlinx.json)
-    api(libs.androidx.security.crypto)
 }

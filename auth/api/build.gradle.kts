@@ -24,4 +24,5 @@ kotlin {
 dependencies {
     implementation(libs.navigation3.runtime)
     implementation(libs.kotlinx.serialization.core)
+    implementation(libs.kotlinx.coroutines.core)
 }
