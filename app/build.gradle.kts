@@ -74,6 +74,7 @@ dependencies {
     // Feature modules
     implementation(project(":core:navigation"))
     implementation(project(":core:infra"))
+    implementation(project(":core:state"))
     implementation(project(":auth:api"))
     implementation(project(":auth:impl"))
 
