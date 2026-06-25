@@ -1,5 +1,5 @@
 package com.appsworld.marketwatch.auth.api
 
 fun interface AccessTokenProvider {
-    fun getAccessToken(): String?
+    suspend fun getAccessToken(): String?
 }

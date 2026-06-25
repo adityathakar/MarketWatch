@@ -5,5 +5,4 @@ import org.koin.plugin.module.dsl.single
 
 val infraModule = module {
     single<AppHttpClient>()
-    single<SecurePrefsFactory>()
 }
